@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Eye, EyeOff } from "lucide-react";
@@ -8,7 +7,6 @@ import { signUpSchema, signInSchema } from "../lib/schemas";
 import type { SignUpFormData, SignInFormData } from "../lib/schemas";
 
 export const AuthPage = () => {
-    const navigate = useNavigate();
     const [isSignUp, setIsSignUp] = useState(false);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
